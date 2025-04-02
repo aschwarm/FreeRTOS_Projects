@@ -186,6 +186,9 @@ void vPortEndScheduler( void ) PRIVILEGED_FUNCTION;
  * Fills the xMPUSettings structure with the memory region information
  * contained in xRegions.
  */
+
+void vInitPrioGroupValue(void);
+
 #if( portUSING_MPU_WRAPPERS == 1 )
 	struct xMEMORY_REGION;
 	void vPortStoreTaskMPUSettings( xMPU_SETTINGS *xMPUSettings, const struct xMEMORY_REGION * const xRegions, StackType_t *pxBottomOfStack, uint32_t ulStackDepth ) PRIVILEGED_FUNCTION;
